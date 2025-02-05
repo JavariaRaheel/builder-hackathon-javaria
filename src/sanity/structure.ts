@@ -1,4 +1,3 @@
-import type {StructureResolver} from 'sanity/structure'
 
 export const apiVersion =
   process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2025-01-20'
@@ -22,10 +21,6 @@ function assertValue<T>(v: T | undefined, errorMessage: string): T {
 }
 
 
-// https://www.sanity.io/docs/structure-builder-cheat-sheet
-export const structure: StructureResolver = (S) =>
-  S.list()
-    .title('Content')
-    .items(S.documentTypeListItems())
+
 
              
